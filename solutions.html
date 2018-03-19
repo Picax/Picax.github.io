@@ -15,10 +15,25 @@
 		<script type="text/javascript">
 			document.write("<style>.stagger { opacity: 0; }</style>");
 		</script>
-		
+		<style >
+#back2Top {
+    width: 40px;
+    line-height: 40px;
+    z-index: 999;
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 5px;
+    right: 40px;
+    color: #555;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+}
+</style>
 	</head>
 	<body class="theme-cyan">
-
+<a id="back2Top" title="Go to top" href="#"><img src="./img/icon/movetotop.png" /></a>
 		<nav class="nav">
 			<div class="grid-container">
 				<a href="index.html"><img class="nav-logo" src="./img/icon/rgs-black.png" alt="RGS Logo"/></a>
@@ -170,16 +185,16 @@
 				<ul>
 						<!-- A USA based top notch B2B expert sales support company specializing in prospecting and business development activities. <br>The Client had challenges in identifying prospective customers to sell a cloud based accounting software. Even if they were, there was no single data source from which it could extract multitudes of data that were reliable. Picax synthesized 1000s of website, extracted high propensity data and categorized those data in a consumable format to customers. Picax processed this in no time. The deal conversion for the client improved by 46%, reduced the sales campaign timeline by 34% and increased the ROI by 24% for its customer. -->
 				<li>
-				<b>Client:</b> <i>A US based top B2B expert sales support company specializing in prospecting and business development activities.</i><br><br>
+				<b>Client:</b> <i>A US based leading strategy consulting firm that specializes in providing marketing strategies to Fortune 500 companies.</i><br><br>
 				</li>
 				<li>
-				<b>Challenge:</b> <i>The Client had challenges in identifying prospective customers to sell a cloud based accounting software. Even if they were, there was no single data source from which it could extract multitudes of data that were reliable.</i><br><br>
+				<b>Challenge:</b> <i> The client has been using traditional approach in identifying new markets to which the F&B giant has to expand. However, the traditional approach had multiple variables and each of those variables have been manually assigned with a weightage. This final weighted output was giving scores that may or may not be optimal for the success of the new store. The client has approached RGS to perform a data driven approach to identify highly prospective locations that could help improve its ROI.</i><br><br>
 				</li>
 				<li>	
-				<b>Solution:</b> <i>Picax synthesized 1000s of website, extracted high propensity data and categorized those data in a consumable format which the client had requested.</i><br> <br>
+				<b>Solution:</b> <i>RGS deployed its team of data scientists to work in this engagement. The team aggregated concomitant data from multiple sources. A combination of library and online research was leveraged. In some cases, where specialized information was needed, some primary research was also conducted with the help of the client.</i><br> <br>
 				</li>
 				<li>
-				<b>Benefits:</b> <i>The deal conversion for the client improved by 33%, reduced the sales campaign timeline by 25% and increased the ROI by 2X for its customer.</i><br><br>
+				<b>Benefits:</b> <i> RGS framed an efficient data driven approach for market entry, recommended top 150 potential cities & towns and created a live dashboard to monitor the status of the store launches.</i><br><br>
 				</li>
 				</ul>
 				<!-- <div class="grid-row stagger">
@@ -411,7 +426,25 @@
 				$('.stagger').removeClass('stagger');
 			}, 2000);
 		</script>
-	
+		<script>
+		$(window).scroll(function() {
+		    var height = $(window).scrollTop();
+		    if (height > 100) {
+		        $('#back2Top').fadeIn();
+		    } else {
+		        $('#back2Top').fadeOut();
+		    }
+		});
+		$(document).ready(function() {
+		    $("#back2Top").click(function(event) {
+		        event.preventDefault();
+		        $("html, body").animate({ scrollTop: 0 }, "slow");
+		        return false;
+		    });
+
+		});
+		
+		</script>
 	</body>
 </html>
 		

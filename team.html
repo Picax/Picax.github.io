@@ -495,26 +495,6 @@
 					</div>
 
 				<div class="grid-row" id="Presales">
-				
-				
-				
-				<div class="grid-col-12 grid-col-8-desktop grid-col-6-hd">
-				<div class="stagger">						
-				<a class="bioCard">
-							<div class="bioCard-portrait">
-								<img
-									class="bioCard-image"
-									src="./img//home/SathyaPillai.jpg"
-									alt="Photo of Sathya"/>
-								<div class="bioCard-highlight theme-borderColor"></div>
-							</div>
-							<div class="bioCard-text bioCard-text--noTitle ">
-								<h5 class="bioCard-name theme-textColor">Sathya Pillai</h5>
-								<div class="bioCard-bio">Presales Analyst | Radiant Global Solutions</div>
-							</div>
-						</a>
-					</div>
-					</div>
 		</div>
 		
 
@@ -560,6 +540,24 @@
 				$('.stagger').removeClass('stagger');
 			}, 2000);
 		</script>
+		<script>
+		$(window).scroll(function() {
+		    var height = $(window).scrollTop();
+		    if (height > 100) {
+		        $('#back2Top').fadeIn();
+		    } else {
+		        $('#back2Top').fadeOut();
+		    }
+		});
+		$(document).ready(function() {
+		    $("#back2Top").click(function(event) {
+		        event.preventDefault();
+		        $("html, body").animate({ scrollTop: 0 }, "slow");
+		        return false;
+		    });
 
+		});
+		
+		</script>
 	</body>
 </html>
