@@ -11,7 +11,7 @@
 		<meta name="twitter:title" content="GV">
 		<meta name="twitter:description" content="GV provides venture capital funding to bold new companies. In the fields of life science, healthcare, artificial intelligence, robotics, transportation, cyber security and agriculture, GV’s companies aim to improve lives and change industries.">
 		<meta name="twitter:image:src" content="http://gv.com/img/press/twitter-card.jpg">
-		<title>Contact</title>
+		<title>CONTACT</title>
 		<link rel="stylesheet" type="text/css" href="./css/main.css?v=1519324">
 		<link rel="icon" href="/img/favicons/32.png">
 		<link rel="icon" href="./img/icon/rgs_fab.png">
@@ -41,7 +41,8 @@ input[type=text],[type=email], select, textarea {
 
 }
 
-button[id=submit] {
+
+button[type=submit] {
     background-color: #b150af;
     color: white;
     padding: 12px 20px;
@@ -50,7 +51,7 @@ button[id=submit] {
     cursor: pointer;
 }
 
-button[id=submit]:hover {
+button[type=submit]:hover {
     background-color: #b150af;
 }
 
@@ -69,9 +70,8 @@ button[id=submit]:hover {
 				<div class="nav-items theme-textColor">
 					<a class="nav-link " href="team.html"><font color="#111b42">Team</font></a>
 					<a class="nav-link " href="solutions.html"><font color="#111b42">Solutions</font></a>
-					<a class="nav-link " href="contact.html"><font color="#111b42">Contact</font></a>
+					<a class="nav-link " href="contact.html"><font color="#111b42">Contacts</font></a>
 				</div>
-				<a class="align:right;" target=_blank href="https://www.linkedin.com/company/radiant-global-solutions" ><img src="./img/icon/linkedin_main.png" /></a>
 			</div>
 		</nav>
 <div class="grid-row">
@@ -90,12 +90,12 @@ button[id=submit]:hover {
 							<br>
 							<br>
 							<br>	
-							<div class="bioCard-title"><font size=5px color="#b150af">USA</font></div>
+							<div class="bioCard-title"><font size=5px color="#b150af">US</font></div>
 							<div class="bioCard-title">Radiant Global Solutions</div>
 							 <div class="bioCard-bio">No 25, Old Kings Highway North,<br>
 							PMB 197,<br>
 							Darien, 06820<br>
-							Connecticut, USA</div>
+							Darien, CT</div>
 							
 							
 							
@@ -110,8 +110,8 @@ button[id=submit]:hover {
 							<div class="bioCard-title">Radiant Global Solutions</div>
 							 <div class="bioCard-bio">No 28, Bazullah Road,<br>
 							T.Nagar,<br>
-							Chennai, 600017<br>
-							Tamil Nadu, India</div>
+							Chennai – 600 017,<br>
+							India</div>
 							
 							
 							
@@ -127,7 +127,6 @@ button[id=submit]:hover {
 <div class="bioCard-title">India</div>
 <div class="bioCard-bio">+91-44-4330-9185</div> -->
 
-  <form action="#" method="post">
     <div class="bioCard-title"><br>
     <br>
 							<br>
@@ -143,8 +142,8 @@ button[id=submit]:hover {
     <div class="grid-row">
     <textarea id="message" name="subject" placeholder="Message" style="height:200px"></textarea>
 	</div>
-   <button id="submit" >Submit</button>
-  </form>
+   <button type="submit" id="submitbtn" >Submit</button>
+
 </div>
 </div>
 
@@ -165,7 +164,9 @@ button[id=submit]:hover {
 		 					<div class="footer-item">
 								&copy;2018 RGS. All rights reserved.
 							</div>
-
+							<a href="/img/docs/GV-Privacy-Policy.pdf" class="theme-colorHover">
+								Privacy policy
+							</a>
 						</div>
 						<div class="grid-col-12 grid-col-6-tablet">
 
@@ -177,29 +178,31 @@ button[id=submit]:hover {
 				</div>
 			</footer>
 
-			
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 		<script type="text/javascript" src="./js/libraries.js"></script>
-		<script type="text/javascript" src="./js/site.js?v=1519324"></script>		
+		<script type="text/javascript" src="./js/site.js?v=1519324"></script>
 
+			
 
 		<script type="text/javascript">
 			setTimeout(function () {
 				$('.stagger').removeClass('stagger');
 			}, 2000);
 		</script>
+		
+	<script type="text/javascript">
+	$("button").click(function() {
 
-<script type="text/javascript" language="javascript">
-		$("button").click(function() {
-		var name = $('#name').val();
+	        var name = $('#name').val();
 	       var email = $('#email').val();
 	       var msg = $('#message').val();
 	      	var urlstring = "https://rgssendmail.azurewebsites.net/api/SendMail?code=09fOFdbcgq9hKG0XqdCpkCsiSXTCjUXkM37uSAiVjPPI3LUkk3oozA==&email="+email+"&name="+name+"&msg="+msg;
 	      	window.location = urlstring;
-
-});
-</script>
+	   
+	});
+	
+	</script>
 	</body>
 </html>
 		
