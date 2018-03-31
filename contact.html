@@ -191,36 +191,14 @@ button[type=submit]:hover {
 		</script>
 
 <script type="text/javascript">
-$("button").click(function() {
- var name = $('#name').val();
-    var email = $('#email').val();
-    var msg = $('#message').val();
-    alert(name+","+email+","+msg);
-	alert("click Function");
-$.ajax({
- 
+		$("button").click(function() {
+		var name = $('#name').val();
+	       var email = $('#email').val();
+	       var msg = $('#message').val();
+	      	var urlstring = "https://rgssendmail.azurewebsites.net/api/SendMail?code=09fOFdbcgq9hKG0XqdCpkCsiSXTCjUXkM37uSAiVjPPI3LUkk3oozA==&email="+email+"&name="+name+"&msg="+msg;
+	      	window.location = urlstring;
 
- url:"https://rgssendmail.azurewebsites.net/api/SendMail?code=09fOFdbcgq9hKG0XqdCpkCsiSXTCjUXkM37uSAiVjPPI3LUkk3oozA==&email="+email+"&name="+name+"&msg="+msg,
- type: "get",
- dataType: 'json',
-
- crossDomain: true,
- headers: {
-                 "Access-Control-Allow-Origin":'*'
-             },
- 
- success: function(data){
-
-     alert(data);
- },
-
- error: function(){
-
-     alert("error");
- }
 });
-});
-
 </script>
 	</body>
 </html>
