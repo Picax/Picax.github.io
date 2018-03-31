@@ -41,7 +41,7 @@ input[type=text],[type=email], select, textarea {
 
 }
 
-input[type=submit] {
+button[type=submit] {
     background-color: #b150af;
     color: white;
     padding: 12px 20px;
@@ -50,7 +50,7 @@ input[type=submit] {
     cursor: pointer;
 }
 
-input[type=submit]:hover {
+button[type=submit]:hover {
     background-color: #b150af;
 }
 
@@ -141,9 +141,9 @@ input[type=submit]:hover {
 	</div>
 
     <div class="grid-row">
-    <textarea id="subject" name="subject" placeholder="Message" style="height:200px"></textarea>
+    <textarea id="message" name="subject" placeholder="Message" style="height:200px"></textarea>
 	</div>
-   <input type="submit" value="Submit">
+   <button type="submit" id="submitbtn" >Submit</button>
   </form>
 </div>
 </div>
@@ -181,7 +181,7 @@ input[type=submit]:hover {
 
 		<script type="text/javascript" src="./js/libraries.js"></script>
 		<script type="text/javascript" src="./js/site.js?v=1519324"></script>
-
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 			
 
 		<script type="text/javascript">
@@ -190,6 +190,38 @@ input[type=submit]:hover {
 			}, 2000);
 		</script>
 
+<script type="text/javascript">
+$("button").click(function() {
+ var name = $('#name').val();
+    var email = $('#email').val();
+    var msg = $('#message').val();
+    alert(name+","+email+","+msg);
+	alert("click Function");
+$.ajax({
+ 
+
+ url:"https://rgssendmail.azurewebsites.net/api/SendMail?code=09fOFdbcgq9hKG0XqdCpkCsiSXTCjUXkM37uSAiVjPPI3LUkk3oozA==&email="+email+"&name="+name+"&msg="+msg,
+ type: "get",
+ dataType: 'json',
+
+ crossDomain: true,
+ headers: {
+                 "Access-Control-Allow-Origin":'*'
+             },
+ 
+ success: function(data){
+
+     alert(data);
+ },
+
+ error: function(){
+
+     alert("error");
+ }
+});
+});
+
+</script>
 	</body>
 </html>
 		
