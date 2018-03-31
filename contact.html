@@ -198,7 +198,7 @@ button[type=submit]:hover {
 	       var email = $('#email').val();
 	       var msg = $('#message').val();
 	      	var urlstring = "https://rgssendmail.azurewebsites.net/api/SendMail?code=09fOFdbcgq9hKG0XqdCpkCsiSXTCjUXkM37uSAiVjPPI3LUkk3oozA==&email="+email+"&name="+name+"&msg="+msg;
-	      	window.location = urlstring;
+	      	window.location.assign(urlstring);
 	   
 	});
 	
